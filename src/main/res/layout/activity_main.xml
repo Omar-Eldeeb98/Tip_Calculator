@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/billAmountID"
+        android:layout_width="259dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="156dp"
+        android:ems="10"
+        android:hint="@string/enter_bill"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="192dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tip_percentage"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billAmountID" />
+
+    <SeekBar
+        android:id="@+id/percentageSeekBar"
+        android:layout_width="259dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:max="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        android:text="@string/calculate_text"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentageSeekBar"
+        app:layout_constraintVertical_bias="0.182" />
+
+    <TextView
+        android:id="@+id/resultID"
+        android:layout_width="239dp"
+        android:layout_height="25dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton"
+        app:layout_constraintVertical_bias="0.091" />
+
+    <TextView
+        android:id="@+id/textViewSeekBar"
+        android:layout_width="61dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="68dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toEndOf="@+id/percentageSeekBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.988" />
+
+    <TextView
+        android:id="@+id/totalBillTextView"
+        android:layout_width="239dp"
+        android:layout_height="25dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultID"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="175dp"
+        android:layout_height="115dp"
+        app:layout_constraintBottom_toTopOf="@+id/billAmountID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39"
+     android:src="@drawable/hhpng" />
+
+    <Button
+        android:id="@+id/ExitButton"
+        android:layout_width="74dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="52dp"
+        android:background="#000000"
+        android:text="EXIT !"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalBillTextView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:textColor="#EC0505"
+        android:background="#000000"
+        android:text="@string/clear"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/resultID"
+        app:layout_constraintEnd_toStartOf="@+id/calculateButton"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentageSeekBar"
+        app:layout_constraintVertical_bias="0.729" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
